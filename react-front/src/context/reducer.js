@@ -1,7 +1,7 @@
 // import{ apartments } from '../data/apartments'
 
 export const initialState = {
-  prints: []
+  user: "Tommy"
 };
 
 export const reducer = (state, action) => {

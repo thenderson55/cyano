@@ -1,7 +1,7 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
-
+import { useStateValue } from "../../context/store";
 
 const NavWrapper = styled.nav`
   display: flex;
@@ -64,9 +64,11 @@ const Line = styled.div`
 `
 
 export default function Navbar() {
+  const [{ user }, dispatch] = useStateValue()
+
   return (
     <NavWrapper>
-      <Logo>Lula</Logo>
+      <Logo>{user}</Logo>
       <NavItems>
         <NavItem>
           <NavLink className="nav-link" to='/about'>About</NavLink>

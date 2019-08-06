@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import Navbar from './components/navbar/Navbar'
 import Gallery from './components/gallery/Gallery'
 import Home from './components/Home'
+import CardDetail from './components/gallery/CardDetail'
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Switch>
           <Route exact path="/" component={Home} />
           {/* <Route path="/contact" component={Contact} /> */}
+          <Route path="/gallery/:id" component={CardDetail} />
           <Route path="/gallery" component={Gallery} />
         </Switch> 
       </StateProvider>

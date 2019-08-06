@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useStateValue } from "../../context/store";
+
 import axios from "axios";
 import Card from "./Card";
 
 export default function Gallery() {
+  const [{ user }, dispatch] = useStateValue()
   const [prints, setPrints] = useState();
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
